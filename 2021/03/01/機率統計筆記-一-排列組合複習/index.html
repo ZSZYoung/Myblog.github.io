@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Aozy"><title>機率統計筆記:(一)排列組合複習 · Aozy</title><meta name="description" content="前言機率統計的一開始是複習之前離散數學的排列組合知識，因為我離散數學已經學完兩年忘記了很多，正好也重新整理下,不過這部分肯定沒有宜豊老師教的那麼深入那麼難。
+引題n根相同天線，假設兩根連續壞掉才會導致系統壞掉。請問若n支天線中恰有m支壞掉，則該系統正常運轉之機率為何？
+①m≤1時
+顯然此時系統正常，"><meta name="keywords" content="博客,运维,blog"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- 加入测试--><!--link (rel="icon", href= url_for('images/favicon.ico')) --><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">Aozy</a></h3><div class="description"><p>何如暮暮與朝朝，更改卻，年年歲歲。</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/ZSZYoung"><i class="fa fa-github"></i></a></li></ul><div class="footer"><div class="p"> <span>©  </span><i class="fa fa-star"></i><span> Aozy</span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/mrcore/hexo-theme-Anatole-Core" target="_blank">Anatole-Core  </a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首頁</a></li><li><a href="/archives">歸檔</a></li><li><a href="/tags">標籤</a></li><li><a href="/about">關於</a></li><li><a href="/guestbook">留言</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>機率統計筆記:(一)排列組合複習</a></h3></div><div class="post-content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>機率統計的一開始是複習之前離散數學的排列組合知識，因為我離散數學已經學完兩年忘記了很多，正好也重新整理下,不過這部分肯定沒有宜豊老師教的那麼深入那麼難。</p>
+<h2 id="引題"><a href="#引題" class="headerlink" title="引題"></a>引題</h2><p>n根相同天線，假設兩根連續壞掉才會導致系統壞掉。請問若n支天線中恰有m支壞掉，則該系統正常運轉之機率為何？</p>
+<p>①m≤1時</p>
+<p>顯然此時系統正常，正常運轉機率為1</p>
+<p>②m≥2時</p>
+<p>考慮壞與不壞的總的情況數為：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301184600.png" alt="20210301184600"></p>
+<p>考慮壞掉的情況個數為(連續一組天線位置為損壞的可能性個數 * 剩下位置任選m-2根天線為損壞天線的可能性個數):</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301184652.png" alt="20210301184652"></p>
+<p>以總情況數為分母，壞掉情況數為分子化簡後得到<strong>系統出錯機率</strong>為:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301163652.png" alt="20210301163652"></p>
+<p>P(系統正常) = 1 - P(系統出錯)為:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301163734.png" alt="20210301163734"></p>
+<h2 id="計數的基本原理"><a href="#計數的基本原理" class="headerlink" title="計數的基本原理"></a>計數的基本原理</h2><blockquote>
+<p>假設在r個試驗中，第一個試驗有n1種可能的結果；且對這n1種可能結果的每一結果，第二個試驗都有n2種可能結果；且對前二個試驗的每一個可能結果，第三個試驗都有n3種可能結果；且對…，那麼此r個試驗總共有n1* n2 * n3…*nr種可能結果。</p>
+</blockquote>
+<h2 id="排列-Permutation"><a href="#排列-Permutation" class="headerlink" title="排列(Permutation)"></a>排列(Permutation)</h2><p>定義：</p>
+<blockquote>
+<p>In mathematics, a permutation of a set is, loosely speaking, an arrangement of its members into a sequence or linear order.</p>
+</blockquote>
+<ul>
+<li><p>全排列：對n個元素進行全部排列稱為全排列，公式為:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301165446.png" alt="20210301165446"></p>
+</li>
+<li><p>部分排列：對n個元素中取m個元素做排列稱為部分排列，公式為：</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301165426.png" alt="20210301165426"></p>
+<ul>
+<li>環狀排列：</li>
+</ul>
+<p>對於在一個環來說，只要兩元素之間的相鄰關係不變則視為同一個環，所以要在全排列的基礎上除以元素總個數，化簡後公式為:<br><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301170214.png" alt="20210301170214"></p>
+<ul>
+<li>multisets的排列(有多種相同元素形成之集合的排列)：<br>因為同一集合下元素相同，所以先視為不同元素做全排列後需要除以各集合元素個數的階乘去重。(對於所有元素全排列下，每個集合各自重複了集合元素個數的全排列數)</li>
+</ul>
+<blockquote>
+<p>If the multiplicities of the elements of M (taken in some order) are m1,m2,…,ml and their sum (that is, the size of M) is n, then the number of multiset permutations of M is given by the multinomial coefficient:</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301171337.png" alt="20210301171337"></p>
+<p>如:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301171408.png" alt="20210301171408"></p>
+<h2 id="組合"><a href="#組合" class="headerlink" title="組合"></a>組合</h2><p>定義：</p>
+<blockquote>
+<p>In mathematics, a combination is a selection of items from a collection, such that the order of selection does not matter (unlike permutations).</p>
+</blockquote>
+<p>對於集合S(其元素個數為n)下，取k個元素可以形成的情況個數為：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301185624.png" alt="20210301185624"></p>
+<p><strong>Pascal’s rule ：</strong><br><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301190221.png" alt="20210301190221"></p>
+<p>組合總數（（x+y)^n係數和）：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301231543.png" alt="20210301231543"></p>
+<p>組合總數證明(以二項式公式證明):<br><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301231907.png" alt="20210301231907"></p>
+<h3 id="二項式定理"><a href="#二項式定理" class="headerlink" title="二項式定理"></a>二項式定理</h3><blockquote>
+<p>In elementary algebra, the binomial theorem (or binomial expansion) describes the algebraic expansion of powers of a binomial. According to the theorem, it is possible to expand the polynomial (x + y)^n into a sum involving terms of the form axbyc, where the exponents b and c are nonnegative integers with b + c = n, and the coefficient a of each term is a specific positive integer depending on n and b. </p>
+</blockquote>
+<p>公式:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301191534.png" alt="20210301191534"></p>
+<p>或表達為：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301191556.png" alt="20210301191556"></p>
+<p>二項式定理證明:</p>
+<ul>
+<li>數學歸納法：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301200838.png" alt="20210301200838"></p>
+<p>其中比較tricky的兩個點是：</p>
+<p>建立j=k-1的關係，一個是迎合後邊整合，一個是提出b的最高次冪項</p>
+<p>運用pascal rule合併兩個組合數</p>
+<ul>
+<li><p>組合方法：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301205025.png" alt="20210301205025"></p>
+</li>
+</ul>
+<p>這是一種直觀理解轉換為一定數學語言的證明方法（不過怎麼看著不太學術@@）</p>
+<h3 id="多項式定理"><a href="#多項式定理" class="headerlink" title="多項式定理"></a>多項式定理</h3><p>引入多項式定理係數：</p>
+<blockquote>
+<p>把 n 个有区别的小球放入到 k 个有区别的盒子中（盒内无序），使得第一个盒子里边装有 n1 个小球，第二个盒子里边装有 n2 个小球，…，第 t 个盒子里边装有 nt个小球，并且满足 n1+n2+…+nt=n,求不同放法的个数：</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301233041.png" alt="20210301233041"></p>
+<p>定義:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302000306.png" alt="20210302000306"></p>
+<p>證明：</p>
+<p><em>TODO</em></p>
+<h2 id="求方程式整數解個數"><a href="#求方程式整數解個數" class="headerlink" title="求方程式整數解個數"></a>求方程式整數解個數</h2><blockquote>
+<p>將n個不同的球分配到r個盒子中，共r^n種可能的結果。<br>每一個球都可以選擇前往r個盒子中的一個，所以共r^n種可能。不同於多項式係數計算的點在於其對每個盒子內球數量無限定。</p>
+</blockquote>
+<p><em>TODO</em></p>
+<h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><ul>
+<li>Wikipedia</li>
+<li>不用数学归纳法，如何证明二项式定理？ - 周佳铭的回答 - 知乎<br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/50613159/answer/134262899">https://www.zhihu.com/question/50613159/answer/134262899</a></li>
+<li>百度百科</li>
+</ul>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2021-03-01</span><i class="fa fa-tag"></i><a class="tag" href="/tags/Probability-Statistics/" title="Probability&amp;Statistics">Probability&amp;Statistics </a><span class="leancloud_visitors"></span></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="" onclick="javascript:join_favorite()" ref="sidebar"></a></div><div class="twitter"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=,http://aozy.tech/2021/03/01/機率統計筆記-一-排列組合複習/,Aozy,機率統計筆記:(一)排列組合複習,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a class="btn" role="navigation" href="/2021/02/28/%E8%A7%A3%E6%B1%BAWin%E4%B8%8Btoolbar%E5%A0%B1%E9%8C%AF%EF%BC%9AThis-file-does-not-have-an-app-associated-with-it-for-performing-this-action/" title="解決Win10下toolbar快捷方式報錯：This file does not have an app associated with it for performing this action.">下一篇</a></li></ul></div><script src="/js/visitors.js"></script><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@latest/dist/Valine.min.js"></script><script>var valine = new Valine({
+  el:'#vcomments',
+  notify:false || false, 
+  verify:false|| false, 
+  app_id:'LP5EBVNHfkmn17seVBnFrDIB-gzGzoHsz',
+  app_key:'I1QAQGHsA6reNM2I3lwh3P8t',
+  placeholder:'May the force be with you.',
+  path: window.location.pathname,
+  serverURLs: '',
+  visitor:true,
+  recordIP:true,
+  avatar:'mp'
+})</script></div></div></div></div><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/add-bookmark.js"></script><script src="/js/baidu-tongji.js"></script></body></html>
