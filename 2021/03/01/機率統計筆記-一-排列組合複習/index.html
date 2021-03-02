@@ -1,7 +1,5 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Aozy"><title>機率統計筆記:(一)排列組合 · Aozy</title><meta name="description" content="前言機率統計的一開始是複習之前離散數學的排列組合知識，因為我離散數學已經學完兩年忘記了很多，正好也重新整理下,不過這部分肯定沒有宜豊老師教的那麼深入那麼難。
-引題n根相同天線，假設兩根連續壞掉才會導致系統壞掉。請問若n支天線中恰有m支壞掉，則該系統正常運轉之機率為何？
-①m≤1時
-顯然此時系統正常，"><meta name="keywords" content="博客,运维,blog"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- 加入测试--><!--link (rel="icon", href= url_for('images/favicon.ico')) --><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">Aozy</a></h3><div class="description"><p>何如暮暮與朝朝，更改卻，年年歲歲。</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/ZSZYoung"><i class="fa fa-github"></i></a></li></ul><div class="footer"><div class="p"> <span>©  </span><i class="fa fa-star"></i><span> Aozy</span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/mrcore/hexo-theme-Anatole-Core" target="_blank">Anatole-Core  </a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首頁</a></li><li><a href="/archives">歸檔</a></li><li><a href="/tags">標籤</a></li><li><a href="/about">關於</a></li><li><a href="/guestbook">留言</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>機率統計筆記:(一)排列組合</a></h3></div><div class="post-content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>機率統計的一開始是複習之前離散數學的排列組合知識，因為我離散數學已經學完兩年忘記了很多，正好也重新整理下,不過這部分肯定沒有宜豊老師教的那麼深入那麼難。</p>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Aozy"><title>機率統計筆記:(一)排列組合 · Aozy</title><meta name="description" content="前言機率統計的一開始是複習之前離散數學的排列組合知識，因為我離散數學已經學完兩年忘記了很多，正好也重新整理下,不過這部分肯定沒有宜豊老師教的那麼深入那麼難。本文的排列P符號和組合C符號和重複組合H符號的符號右邊數字表達上，因為大陸表示法和國際表示法似乎顛倒，而文中均涉及，會意即可。
+引題n根相同天線"><meta name="keywords" content="博客,运维,blog"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- 加入测试--><!--link (rel="icon", href= url_for('images/favicon.ico')) --><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">Aozy</a></h3><div class="description"><p>何如暮暮與朝朝，更改卻，年年歲歲。</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/ZSZYoung"><i class="fa fa-github"></i></a></li></ul><div class="footer"><div class="p"> <span>©  </span><i class="fa fa-star"></i><span> Aozy</span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/mrcore/hexo-theme-Anatole-Core" target="_blank">Anatole-Core  </a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首頁</a></li><li><a href="/archives">歸檔</a></li><li><a href="/tags">標籤</a></li><li><a href="/about">關於</a></li><li><a href="/guestbook">留言</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>機率統計筆記:(一)排列組合</a></h3></div><div class="post-content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>機率統計的一開始是複習之前離散數學的排列組合知識，因為我離散數學已經學完兩年忘記了很多，正好也重新整理下,不過這部分肯定沒有宜豊老師教的那麼深入那麼難。<br><strong>本文的排列P符號和組合C符號和重複組合H符號的符號右邊數字表達上，因為大陸表示法和國際表示法似乎顛倒，而文中均涉及，會意即可。</strong></p>
 <h2 id="引題"><a href="#引題" class="headerlink" title="引題"></a>引題</h2><p>n根相同天線，假設兩根連續壞掉才會導致系統壞掉。請問若n支天線中恰有m支壞掉，則該系統正常運轉之機率為何？</p>
 <p>①m≤1時</p>
 <p>顯然此時系統正常，正常運轉機率為1</p>
@@ -14,9 +12,11 @@
 <p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301163652.png" alt="20210301163652"></p>
 <p>P(系統正常) = 1 - P(系統出錯)為:</p>
 <p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301163734.png" alt="20210301163734"></p>
+<hr>
 <h2 id="計數的基本原理"><a href="#計數的基本原理" class="headerlink" title="計數的基本原理"></a>計數的基本原理</h2><blockquote>
 <p>假設在r個試驗中，第一個試驗有n1種可能的結果；且對這n1種可能結果的每一結果，第二個試驗都有n2種可能結果；且對前二個試驗的每一個可能結果，第三個試驗都有n3種可能結果；且對…，那麼此r個試驗總共有n1* n2 * n3…*nr種可能結果。</p>
 </blockquote>
+<hr>
 <h2 id="排列-Permutation"><a href="#排列-Permutation" class="headerlink" title="排列(Permutation)"></a>排列(Permutation)</h2><p>定義：</p>
 <blockquote>
 <p>In mathematics, a permutation of a set is, loosely speaking, an arrangement of its members into a sequence or linear order.</p>
@@ -29,6 +29,7 @@
 </li>
 </ul>
 <p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301165426.png" alt="20210301165426"></p>
+<p>理解：所有元素全排列後去除重複計數部分（對每一種全排列情況，都重複計數了剩餘元素n-r的全排列次）</p>
 <ul>
 <li>環狀排列：</li>
 </ul>
@@ -42,12 +43,14 @@
 <p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301171337.png" alt="20210301171337"></p>
 <p>如:</p>
 <p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301171408.png" alt="20210301171408"></p>
+<hr>
 <h2 id="組合"><a href="#組合" class="headerlink" title="組合"></a>組合</h2><p>定義：</p>
 <blockquote>
 <p>In mathematics, a combination is a selection of items from a collection, such that the order of selection does not matter (unlike permutations).</p>
 </blockquote>
 <p>對於集合S(其元素個數為n)下，取k個元素可以形成的情況個數為：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301185624.png" alt="20210301185624"></p>
+<p>理解：所有元素全排列後去除重複計數部分（對每一種全排列情況，都重複計數了r個元素的全排列次*剩餘元素n-r的全排列次）</p>
 <p><strong>Pascal’s rule ：</strong><br><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301190221.png" alt="20210301190221"></p>
 <p>組合總數（（x+y)^n係數和）：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301231543.png" alt="20210301231543"></p>
@@ -73,19 +76,48 @@
 </li>
 </ul>
 <p>這是一種直觀理解轉換為一定數學語言的證明方法（不過怎麼看著不太學術@@）</p>
-<h3 id="多項式定理"><a href="#多項式定理" class="headerlink" title="多項式定理"></a>多項式定理</h3><p>引入多項式定理係數：</p>
+<h3 id="多項式定理"><a href="#多項式定理" class="headerlink" title="多項式定理"></a>多項式定理</h3><p>為了方便定義如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302214405.png" alt="20210302214405"></p>
+<p>引入多項式定理項數計算：</p>
 <blockquote>
-<p>把 n 个有区别的小球放入到 k 个有区别的盒子中（盒内无序），使得第一个盒子里边装有 n1 个小球，第二个盒子里边装有 n2 个小球，…，第 t 个盒子里边装有 nt个小球，并且满足 n1+n2+…+nt=n,求不同放法的个数：</p>
+<p>把 n 个小球放入到 r个有区别的盒子中（盒内无序），使得第一个盒子里边装有 n1 个小球，第二个盒子里边装有 n2 个小球，…，第 t 个盒子里边装有 nt个小球，并且满足 n1+n2+…+nt=n,求不同放法的个数。等價於：將n個資源放入r個不同盒子，可以空，求不同放法個數。</p>
 </blockquote>
+<p>故多項式展開項數為：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302230905.png" alt="20210302230905"></p>
+<p>多項式展開合併後每一項前係數為（從n個連乘的(x1+x2+…+xm)中取n1個得到項中x1的冪，從n-n1個中取n2個得到項中x2的冪，以此類推計數，所有的組合的數量即項前係數大小）：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210301233041.png" alt="20210301233041"></p>
 <p>定義:</p>
 <p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302000306.png" alt="20210302000306"></p>
+<p>太久沒碰了，竟然連連乘符號都完了，補充：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302225053.png" alt="20210302225053"></p>
 <p>證明：</p>
 <p><em>TODO</em></p>
-<h2 id="求方程式整數解個數"><a href="#求方程式整數解個數" class="headerlink" title="求方程式整數解個數"></a>求方程式整數解個數</h2><blockquote>
+<hr>
+<h2 id="組合公式應用：求方程式整數解個數"><a href="#組合公式應用：求方程式整數解個數" class="headerlink" title="組合公式應用：求方程式整數解個數"></a>組合公式應用：求方程式整數解個數</h2><blockquote>
 <p>將n個不同的球分配到r個盒子中，共r^n種可能的結果。<br>每一個球都可以選擇前往r個盒子中的一個，所以共r^n種可能。不同於多項式係數計算的點在於其對每個盒子內球數量無限定。</p>
 </blockquote>
-<p><em>TODO</em></p>
+<p>對於方程：x1 + x2 + …. + xr = n</p>
+<ul>
+<li><p>求其正整數解集數量：可轉化為將n個相同資源分配到r個不同袋子中，而且袋子不可為空，結合隔板插空法，所以即從n-1個空中組合r-1個空作為隔板位置。即：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302202157.png" alt="20210302202157"></p>
+</li>
+<li><p>求其非負整數解集數量：可轉化為將n個相同資源分配到r個不同袋子中，而且袋子可以為空，結合隔板插空法，所以即從n+r-1（資源數加上隔板數）個位置中組合r-1個位置作為隔板位置。即：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302202447.png" alt="20210302202447"></p>
+</li>
+</ul>
+<p>例題1：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302194826.png" alt="20210302194826"></p>
+<p>可轉化為求方程：x1 + x2 + x3 = 4,x1為取白球個數，x2為取紅球個數，x3為取黑球個數 的非負整數解集個數（將4個取球的機會分到三種可取顏色）。用分隔板法故答案為：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302195519.png" alt="20210302195519"></p>
+<p>例題2：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302195831.png" alt="20210302195831"></p>
+<p>可轉化為求方程：x1 + x2 + x3 + x4 + x5 + x6 = 2 ,x1為擲到1的次數其他同理， 的非負整數解集個數。隔板法結果為：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302200230.png" alt="20210302200230"></p>
+<p>也可以直接考慮為全排列再去除重複計數的部分(除了兩個點數一樣的都被重複計數了一次)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302200424.png" alt="20210302200424"></p>
+<h2 id="需注意習題集"><a href="#需注意習題集" class="headerlink" title="需注意習題集"></a>需注意習題集</h2><p>習題1:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302204723.png" alt="20210302204723"></p>
+<p>這邊要注意要除以2！，因為組合公式中蘊含了兩不同分類關係，而本題未要求區別分類</p>
 <h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><ul>
 <li>Wikipedia</li>
 <li>不用数学归纳法，如何证明二项式定理？ - 周佳铭的回答 - 知乎<br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/50613159/answer/134262899">https://www.zhihu.com/question/50613159/answer/134262899</a></li>
