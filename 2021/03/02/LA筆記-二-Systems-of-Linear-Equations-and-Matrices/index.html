@@ -36,8 +36,12 @@ A mathematical sentence with an equal sign (=) to indicate that two expressi"><m
 <p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302105506.png" alt="20210302105506"></p>
 <p>如：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302105547.png" alt="20210302105547"></p>
+<p>當僅僅constant vecotr(b)不同時，可以簡單的表示幾個增廣矩陣為：</p>
+<p>AX=b, with b=b1,b2,b3 表示為：[A|b1|b2|b3] -&gt;(ERO) [A’|b1’|b2’|b3’]</p>
 <hr>
-<h4 id="Gauss–Jordan-elimination（高斯約當消去法）"><a href="#Gauss–Jordan-elimination（高斯約當消去法）" class="headerlink" title="Gauss–Jordan elimination（高斯約當消去法）"></a>Gauss–Jordan elimination（高斯約當消去法）</h4><p>Types of Elementary row operations:</p>
+<h4 id="Gauss–Jordan-elimination（高斯約當消去法）"><a href="#Gauss–Jordan-elimination（高斯約當消去法）" class="headerlink" title="Gauss–Jordan elimination（高斯約當消去法）"></a>Gauss–Jordan elimination（高斯約當消去法）</h4><p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/imagesGJ%EF%BC%A52.jpg" alt="GJＥ2"></p>
+<p>由高斯消去法(forward pass)得到REF,再經由約旦的方法(backward pass)消去leading1所在column得到RREF，由RREF即可得到general solution.</p>
+<p>Types of Elementary row operations:</p>
 <p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302110411.png" alt="20210302110411"></p>
 <ul>
 <li>row交換操作：矩陣中互換兩個row位置</li>
@@ -64,6 +68,19 @@ A mathematical sentence with an equal sign (=) to indicate that two expressi"><m
 <li>For two successive (non-zero) rows, the leading 1 in the higher row is further left than the leading one in the lower row. 對於兩個連續的非全0row，上邊row的leading 1較下邊row於更左邊。</li>
 </ul>
 </blockquote>
+<p>some facts of about REF:</p>
+<ul>
+<li>REF of A are not unique</li>
+<li>RREF of A is unique</li>
+<li>The leading 1 always occur in the same positions in A, those are called the <strong>pivot(樞紐) position</strong> of A.</li>
+<li>Pivot column: a column of A that has leading 1</li>
+<li>Pivot row: a row of A that has leading 1 </li>
+<li>A <strong>nonzero entry</strong> in a pivot position of A is called a pivot of A </li>
+</ul>
+<p>例子：<br>Find (1)pivot rows (2)pivot columns (3)pivots of A where:<br><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210307222935.png" alt="20210307222935"></p>
+<p>通過ERO獲得REF：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210307223124.png" alt="20210307223124"></p>
+<p>所以：<br>(1):pivot rowsL1,2,3<br>(2):pivot columns:1,3,5<br>(3):pivots of A: -10,-5</p>
 <p><strong>Def of Reduced row echelon form</strong></p>
 <blockquote>
 <ul>
@@ -103,8 +120,27 @@ A mathematical sentence with an equal sign (=) to indicate that two expressi"><m
 <blockquote>
 <p>every system of linear equations has either no solutions, exactly one solution, or infinitely many solutions. 線性系統要麽沒解，要麽有唯一解，要麽由無窮多解。</p>
 </blockquote>
+<p>無解情況：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210307214127.png" alt="20210307214127"></p>
+<p>可解得REF：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210307214611.png" alt="20210307214611"></p>
+<p>對於最下邊row而言，0=-17顯然衝突，無解。</p>
 <p>證明綫性系統不會有大於一的有窮個數解:</p>
 <p><em>TODO</em></p>
+<h4 id="Homogeneous（齊次）-linear-system"><a href="#Homogeneous（齊次）-linear-system" class="headerlink" title="Homogeneous（齊次） linear system"></a>Homogeneous（齊次） linear system</h4><p>形如: AX=0</p>
+<p>properties:</p>
+<ul>
+<li>X=0 is the trivial solution of AX=0 and hence AX=0 is consistent</li>
+<li>AX=0 has exactly one solution or infinitely many solution</li>
+</ul>
+<p><strong>Theorem:</strong></p>
+<blockquote>
+<p>if a homogeneous linear system has n unknowns, and if the reduced row echelon form of its augmented matrix has r nonzero rows,r&lt;=n,then the linear system has n-r free variables.</p>
+</blockquote>
+<p>proof of this theorem:</p>
+<p>The reduced row echelon form of its augmented matrix has r nonzero rows -&gt;<br>it fellows that the homogeneous linear system has r leading1’s variable</p>
+<p>also number of leading1’s variables + number of free variables = n -&gt;<br>number of free variables = n - number of leading 1’s variables = n - r</p>
+<h2 id="Matrices"><a href="#Matrices" class="headerlink" title="Matrices"></a>Matrices</h2><p><em>TODO</em></p>
 <h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><ul>
 <li>wikipedia</li>
 <li><a target="_blank" rel="noopener" href="https://www.statlect.com/matrix-algebra/augmented-matrix">https://www.statlect.com/matrix-algebra/augmented-matrix</a></li>
