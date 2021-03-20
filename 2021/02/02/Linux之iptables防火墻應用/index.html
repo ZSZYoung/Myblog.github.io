@@ -47,7 +47,7 @@
 <p>將到host22023port的封包轉到netns網卡的22port：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@YoungDebian:/<span class="comment"># iptables -t nat -A PREROUTING -p tcp -d 10.225.99.76 --dport 22023 -j DNAT --to 10.0.0.2:22</span></span><br></pre></td></tr></table></figure>
 
-<p>關閉host端的ssh服務並開啟netns端的ssh服務:</p>
+<p>關閉host端的ssh服務並開啟netns端的ssh服務:<br><strong>因為systemctl管理的systemd是一個daemon進程，所以沒有對netns整合，不可以直接用systemctl在netns中開啓，需如下直接開啓sshd:</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">root@YoungDebian:/<span class="comment"># systemctl stop sshd</span></span><br><span class="line">root@YoungDebian:~<span class="comment"># ip netns exec net1 /usr/sbin/sshd -o PidFile=/run/sshd-net1.pid</span></span><br><span class="line">root@YoungDebian:~<span class="comment"># ip netns exec net1 netstat -anp | grep &quot;sshd&quot;</span></span><br><span class="line">tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      3555/sshd           </span><br><span class="line">tcp6       0      0 :::22                   :::*                    LISTEN      3555/sshd        </span><br></pre></td></tr></table></figure>
 <p><strong>注意:</strong><br>假如報錯Missing privilege separation directory: /run/sshd 則在/run下mkdir sshd即可。</p>
 <p>驗證連接：</p>
