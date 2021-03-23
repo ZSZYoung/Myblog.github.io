@@ -126,7 +126,11 @@ A mathematical sentence with an equal sign (=) to indicate that two expressi"><m
 <p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210307214611.png" alt="20210307214611"></p>
 <p>對於最下邊row而言，0=-17顯然衝突，無解。</p>
 <p>證明綫性系統不會有大於一個有窮解:</p>
-<p><em>TODO</em></p>
+<p>proof: </p>
+<p>suppose that the linear system AX=b has finite solutions, say x1,x2 are two distinct solution of AX=b. i.e. A * x1 = b, A * x2 = b<br>then let X = x1 + k(x2-x1),k is a scalar </p>
+<p>=&gt; A * X = A * (x1+k(x2-x1)) = Ax1 + k(Ax2-Ax1) = b + k(b-b) = b</p>
+<p>i.e. X = x1 + k(x2-x1),k∈R is the solution of the AX=b.It fellows that the linear system AX=b has infinitely many solution.</p>
+<p>假設有兩個相異解-&gt;有這兩解構造某含參數解-&gt;得到結論（兩個相異解會產生無窮多組解）-&gt; 綫性系統不會有大於一個有窮解</p>
 <h4 id="Homogeneous（齊次）-linear-system"><a href="#Homogeneous（齊次）-linear-system" class="headerlink" title="Homogeneous（齊次） linear system"></a>Homogeneous（齊次） linear system</h4><p>形如: AX=0</p>
 <p>properties:</p>
 <ul>
@@ -140,7 +144,6 @@ A mathematical sentence with an equal sign (=) to indicate that two expressi"><m
 <p>proof of this theorem:</p>
 <p>The reduced row echelon form of its augmented matrix has r nonzero rows -&gt;<br>it fellows that the homogeneous linear system has r leading1’s variable</p>
 <p>also number of leading1’s variables + number of free variables = n -&gt;<br>number of free variables = n - number of leading 1’s variables = n - r</p>
-<h2 id="Matrices"><a href="#Matrices" class="headerlink" title="Matrices"></a>Matrices</h2><p><em>TODO</em></p>
 <h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><ul>
 <li>wikipedia</li>
 <li><a target="_blank" rel="noopener" href="https://www.statlect.com/matrix-algebra/augmented-matrix">https://www.statlect.com/matrix-algebra/augmented-matrix</a></li>
