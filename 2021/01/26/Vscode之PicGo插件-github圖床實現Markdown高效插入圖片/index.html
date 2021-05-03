@@ -1,38 +1,36 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Aozy"><title>Vscode之PicGo插件+github圖床實現Markdown高效插入圖片 · Aozy</title><meta name="description" content="動機Markdown的圖片插入一直都是一個比較麻煩的事情。因為不可能把圖片都放在本地存取，所以之前也試過用國內的免費圖床，但從獲得圖片到實際插入要經過以下麻煩過程：
-
-截圖
-手動上傳圖床
-從圖床獲取連接
-複製到Markdown內文
-
-一來需要手動干很多事情，二來再管理其他的圖床網站也會要多花些功夫，"><meta name="keywords" content="博客,运维,blog"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- 加入测试--><!--link (rel="icon", href= url_for('images/favicon.ico')) --><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">Aozy</a></h3><div class="description"><p>何如暮暮與朝朝，更改卻，年年歲歲。</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/ZSZYoung"><i class="fa fa-github"></i></a></li></ul><div class="footer"><div class="p"> <span>©  </span><i class="fa fa-star"></i><span> Aozy</span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/mrcore/hexo-theme-Anatole-Core" target="_blank">Anatole-Core  </a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首頁</a></li><li><a href="/archives">歸檔</a></li><li><a href="/tags">標籤</a></li><li><a href="/about">關於</a></li><li><a href="/guestbook">留言</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>Vscode之PicGo插件+github圖床實現Markdown高效插入圖片</a></h3></div><div class="post-content"><h2 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h2><p>Markdown的圖片插入一直都是一個比較麻煩的事情。因為不可能把圖片都放在本地存取，所以之前也試過用國內的免費圖床，但從獲得圖片到實際插入要經過以下麻煩過程：</p>
-<ul>
-<li>截圖</li>
-<li>手動上傳圖床</li>
-<li>從圖床獲取連接</li>
-<li>複製到Markdown內文</li>
-</ul>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Aozy"><title>Vscode之PicGo插件+github圖床實現Markdown高效插入圖片 · Aozy</title><meta name="description" content="動機
+Markdown的圖片插入一直都是一個比較麻煩的事情。因為不可能把圖片都放在本地存取，所以之前也試過用國內的免費圖床，但從獲得圖片到實際插入要經過以下麻煩過程： * 截圖 * 手動上傳圖床 * 從圖床獲取連接 * 複製到Markdown內文
+一來需要手動干很多事情，二來再管理其他的圖床網站"><meta name="keywords" content="blog"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- 加入测试--><!--link (rel="icon", href= url_for('images/favicon.ico')) --><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">Aozy</a></h3><div class="description"><p>何如暮暮與朝朝，更改卻，年年歲歲。</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/ZSZYoung"><i class="fa fa-github"></i></a></li></ul><div class="footer"><div class="p"> <span>©  </span><i class="fa fa-star"></i><span> Aozy</span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/mrcore/hexo-theme-Anatole-Core" target="_blank">Anatole-Core  </a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首頁</a></li><li><a href="/archives">歸檔</a></li><li><a href="/tags">標籤</a></li><li><a href="/about">關於</a></li><li><a href="/guestbook">留言</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>Vscode之PicGo插件+github圖床實現Markdown高效插入圖片</a></h3></div><div class="post-content"><h2 id="動機">動機</h2>
+<p>Markdown的圖片插入一直都是一個比較麻煩的事情。因為不可能把圖片都放在本地存取，所以之前也試過用國內的免費圖床，但從獲得圖片到實際插入要經過以下麻煩過程： * 截圖 * 手動上傳圖床 * 從圖床獲取連接 * 複製到Markdown內文</p>
 <p>一來需要手動干很多事情，二來再管理其他的圖床網站也會要多花些功夫，況且可能哪天圖床網站就跑路了@@。所以在查閱資料後決定用github倉庫作為圖床，結合PicGo即可實現一個快捷鍵直接完成上述動作。</p>
-<hr>
-<h2 id="Github倉庫圖床建立"><a href="#Github倉庫圖床建立" class="headerlink" title="Github倉庫圖床建立"></a>Github倉庫圖床建立</h2><ul>
-<li>新建倉庫（Public）</li>
-<li>點擊頭像-&gt;setting-&gt;Developer settings-&gt;Personal access tokens-&gt;Generate new token-&gt;如下圖備註note並僅勾選repo即可<br><img src="https://raw.githubusercontent.com/ZSZYoung/Images-Host/main/blog/images/20210126195758.png" alt="20210126195758"></li>
-<li>保存生成的token</li>
-</ul>
-<hr>
-<h2 id="Vscode之PicGo插件配置"><a href="#Vscode之PicGo插件配置" class="headerlink" title="Vscode之PicGo插件配置"></a>Vscode之PicGo插件配置</h2><ul>
-<li><p>在vscode Extension中搜尋PicGo並安裝<br><img src="https://raw.githubusercontent.com/ZSZYoung/Images-Host/main/blog/images/20210126200040.png" alt="20210126200040"></p>
-</li>
-<li><p>配置PicGo插件的setting<br>點擊左下角manage（小齒輪）-&gt;點擊setting -&gt;搜索PicGo -&gt;左側篩選欄中選擇extension中的PicGo-&gt; 填入以下項目：<br><img src="https://raw.githubusercontent.com/ZSZYoung/Images-Host/main/blog/images/20210126200733.png" alt="20210126200733"></p>
-<p>Path:你即將上傳的圖片在Github倉庫存儲的位置<br>Repo:Username/Repo<br>Token:剛剛保存的token在此填入<br>Custom Url:因為大陸地區訪問Github速度堪憂導致圖片在大陸地區顯示緩慢，所以需要用到CDN加速，以JSDelivr為例配置為:<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/%E7%94%A8%E6%88%B6%E5%90%8D/%E5%80%89%E5%BA%AB%E5%90%8D@%E5%88%86%E6%94%AF%E5%90%8D">https://cdn.jsdelivr.net/gh/用戶名/倉庫名@分支名</a></p>
-</li>
-</ul>
-<hr>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p><img src="https://raw.githubusercontent.com/ZSZYoung/Images-Host/main/blog/images/20210126201007.png" alt="20210126201007"><br>簡單來用就把圖片複製，然後在MD中要插入圖片的地方按下Ctrl+Alt+U（Windows/unix）即可將剪貼板的圖片自動上傳到Github圖床倉庫並獲得URL到待插入圖片處。</p>
-<hr>
-<h2 id="雜記"><a href="#雜記" class="headerlink" title="雜記"></a>雜記</h2><p>小東西解決大麻煩，讓Markdown的撰寫更方便快捷，Github免費也不會跑路。</p>
+<table style="width:6%;">
+<colgroup>
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>## Github倉庫圖床建立 * 新建倉庫（Public） * 點擊頭像-&gt;setting-&gt;Developer settings-&gt;Personal access tokens-&gt;Generate new token-&gt;如下圖備註note並僅勾選repo即可 <img src="https://raw.githubusercontent.com/ZSZYoung/Images-Host/main/blog/images/20210126195758.png" alt="20210126195758" /> * 保存生成的token</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>## Vscode之PicGo插件配置 * 在vscode Extension中搜尋PicGo並安裝 <img src="https://raw.githubusercontent.com/ZSZYoung/Images-Host/main/blog/images/20210126200040.png" alt="20210126200040" /></td>
+</tr>
+<tr class="even">
+<td>* 配置PicGo插件的setting 點擊左下角manage（小齒輪）-&gt;點擊setting -&gt;搜索PicGo -&gt;左側篩選欄中選擇extension中的PicGo-&gt; 填入以下項目： <img src="https://raw.githubusercontent.com/ZSZYoung/Images-Host/main/blog/images/20210126200733.png" alt="20210126200733" /></td>
+</tr>
+<tr class="odd">
+<td>Path:你即將上傳的圖片在Github倉庫存儲的位置 Repo:Username/Repo Token:剛剛保存的token在此填入 Custom Url:因為大陸地區訪問Github速度堪憂導致圖片在大陸地區顯示緩慢，所以需要用到CDN加速，以JSDelivr為例配置為:https://cdn.jsdelivr.net/gh/用戶名/倉庫名@分支名</td>
+</tr>
+</tbody>
+</table>
+<h2 id="使用方法">使用方法</h2>
+<p><img src="https://raw.githubusercontent.com/ZSZYoung/Images-Host/main/blog/images/20210126201007.png" alt="20210126201007" /> 簡單來用就把圖片複製，然後在MD中要插入圖片的地方按下Ctrl+Alt+U（Windows/unix）即可將剪貼板的圖片自動上傳到Github圖床倉庫並獲得URL到待插入圖片處。</p>
+<hr />
+<h2 id="雜記">雜記</h2>
+<p>小東西解決大麻煩，讓Markdown的撰寫更方便快捷，Github免費也不會跑路。</p>
 <ul>
-<li>PicGo插件更多信息: <a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=Spades.vs-picgo">https://marketplace.visualstudio.com/items?itemName=Spades.vs-picgo</a></li>
+<li>PicGo插件更多信息: https://marketplace.visualstudio.com/items?itemName=Spades.vs-picgo</li>
 </ul>
 </div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2021-01-26</span><i class="fa fa-tag"></i><a class="tag" href="/tags/PicGo/" title="PicGo">PicGo </a><a class="tag" href="/tags/Markdown/" title="Markdown">Markdown </a><a class="tag" href="/tags/Vscode/" title="Vscode">Vscode </a><span class="leancloud_visitors"></span></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="" onclick="javascript:join_favorite()" ref="sidebar"></a></div><div class="twitter"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=,http://aozy.tech/2021/01/26/Vscode之PicGo插件-github圖床實現Markdown高效插入圖片/,Aozy,Vscode之PicGo插件+github圖床實現Markdown高效插入圖片,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/2021/01/26/su-root%E5%92%8C-su/" title="Su root和 Su -">上一篇</a></li><li class="next pagbuttons"><a class="btn" role="navigation" href="/2021/01/25/github-hexo%E5%80%8B%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" title="Github+Hexo個人博客搭建">下一篇</a></li></ul></div><script src="/js/visitors.js"></script><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@latest/dist/Valine.min.js"></script><script>var valine = new Valine({
   el:'#vcomments',
