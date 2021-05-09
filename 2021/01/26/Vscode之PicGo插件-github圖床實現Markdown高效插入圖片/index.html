@@ -9,23 +9,23 @@ Markdown的圖片插入一直都是一個比較麻煩的事情。因為不可能
 </colgroup>
 <thead>
 <tr class="header">
-<th>## Github倉庫圖床建立 * 新建倉庫（Public） * 點擊頭像-&gt;setting-&gt;Developer settings-&gt;Personal access tokens-&gt;Generate new token-&gt;如下圖備註note並僅勾選repo即可 <img src="https://raw.githubusercontent.com/ZSZYoung/Images-Host/main/blog/images/20210126195758.png" alt="20210126195758" /> * 保存生成的token</th>
+<th>## Github倉庫圖床建立 * 新建倉庫（Public） * 點擊頭像-&gt;setting-&gt;Developer settings-&gt;Personal access tokens-&gt;Generate new token-&gt;如下圖備註note並僅勾選repo即可 <img src="https://raw.githubusercontent.com/ZSZYoung/Images-Host/main/blog/images/20210126195758.png" /> * 保存生成的token</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>## Vscode之PicGo插件配置 * 在vscode Extension中搜尋PicGo並安裝 <img src="https://raw.githubusercontent.com/ZSZYoung/Images-Host/main/blog/images/20210126200040.png" alt="20210126200040" /></td>
+<td>## Vscode之PicGo插件配置 * 在vscode Extension中搜尋PicGo並安裝 <img src="https://raw.githubusercontent.com/ZSZYoung/Images-Host/main/blog/images/20210126200040.png" /></td>
 </tr>
 <tr class="even">
-<td>* 配置PicGo插件的setting 點擊左下角manage（小齒輪）-&gt;點擊setting -&gt;搜索PicGo -&gt;左側篩選欄中選擇extension中的PicGo-&gt; 填入以下項目： <img src="https://raw.githubusercontent.com/ZSZYoung/Images-Host/main/blog/images/20210126200733.png" alt="20210126200733" /></td>
+<td>* 配置PicGo插件的setting 點擊左下角manage（小齒輪）-&gt;點擊setting -&gt;搜索PicGo -&gt;左側篩選欄中選擇extension中的PicGo-&gt; 填入以下項目： <img src="https://raw.githubusercontent.com/ZSZYoung/Images-Host/main/blog/images/20210126200733.png" /></td>
 </tr>
 <tr class="odd">
-<td>Path:你即將上傳的圖片在Github倉庫存儲的位置 Repo:Username/Repo Token:剛剛保存的token在此填入 Custom Url:因為大陸地區訪問Github速度堪憂導致圖片在大陸地區顯示緩慢，所以需要用到CDN加速，以JSDelivr為例配置為:https://cdn.jsdelivr.net/gh/用戶名/倉庫名@分支名</td>
+<td>Path:你即將上傳的圖片在Github倉庫存儲的位置 Repo:Username/Repo Token:剛剛保存的token在此填入 Custom Url:因為大陸地區訪問Github速度堪憂導致圖片在大陸地區顯示緩慢，所以需要用到CDN加速，以JSDelivr為例配置為:https://cdn.jsdelivr.net/gh/用戶名/倉庫名@分支名 Custom Output Format:筆者有將hexo的渲染器改為pandoc，該渲染器在處理圖片時會將圖片注釋渲染上去，影響美觀，應在picgo上傳階段取消自動注釋,故該項應設置為: <img src="$%7Burl%7D" /></td>
 </tr>
 </tbody>
 </table>
 <h2 id="使用方法">使用方法</h2>
-<p><img src="https://raw.githubusercontent.com/ZSZYoung/Images-Host/main/blog/images/20210126201007.png" alt="20210126201007" /> 簡單來用就把圖片複製，然後在MD中要插入圖片的地方按下Ctrl+Alt+U（Windows/unix）即可將剪貼板的圖片自動上傳到Github圖床倉庫並獲得URL到待插入圖片處。</p>
+<p><img src="https://raw.githubusercontent.com/ZSZYoung/Images-Host/main/blog/images/20210126201007.png" /> 簡單來用就把圖片複製，然後在MD中要插入圖片的地方按下Ctrl+Alt+U（Windows/unix）即可將剪貼板的圖片自動上傳到Github圖床倉庫並獲得URL到待插入圖片處。</p>
 <hr />
 <h2 id="雜記">雜記</h2>
 <p>小東西解決大麻煩，讓Markdown的撰寫更方便快捷，Github免費也不會跑路。</p>

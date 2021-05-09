@@ -1,21 +1,19 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Aozy"><title>機率統計筆記:(四)隨機變數 · Aozy</title><meta name="description" content="Random Variable(隨機變數)
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Aozy"><title>機率統計筆記:(四)離散隨機變數分布 · Aozy</title><meta name="description" content="Random Variable(隨機變數)
 定義：
 
 給定樣本空間(S,F)，如果其上的實值函數X:S-&amp;gt;R 是 F(實值)可測函數，則稱X為（實值）隨機變數。
 
 隨機變數是一種關於樣本空間的函數 
 
-Cumulative Distribution Function(累積分佈函數"><meta name="keywords" content="blog"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- 加入测试--><!--link (rel="icon", href= url_for('images/favicon.ico')) --><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">Aozy</a></h3><div class="description"><p>何如暮暮與朝朝，更改卻，年年歲歲。</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/ZSZYoung"><i class="fa fa-github"></i></a></li></ul><div class="footer"><div class="p"> <span>©  </span><i class="fa fa-star"></i><span> Aozy</span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/mrcore/hexo-theme-Anatole-Core" target="_blank">Anatole-Core  </a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首頁</a></li><li><a href="/archives">歸檔</a></li><li><a href="/tags">標籤</a></li><li><a href="/about">關於</a></li><li><a href="/guestbook">留言</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>機率統計筆記:(四)隨機變數</a></h3></div><div class="post-content"><h2 id="random-variable隨機變數">Random Variable(隨機變數)</h2>
+Cumulative Distribution Function(累積分佈函數"><meta name="keywords" content="blog"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- 加入测试--><!--link (rel="icon", href= url_for('images/favicon.ico')) --><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">Aozy</a></h3><div class="description"><p>何如暮暮與朝朝，更改卻，年年歲歲。</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/ZSZYoung"><i class="fa fa-github"></i></a></li></ul><div class="footer"><div class="p"> <span>©  </span><i class="fa fa-star"></i><span> Aozy</span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/mrcore/hexo-theme-Anatole-Core" target="_blank">Anatole-Core  </a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首頁</a></li><li><a href="/archives">歸檔</a></li><li><a href="/tags">標籤</a></li><li><a href="/about">關於</a></li><li><a href="/guestbook">留言</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>機率統計筆記:(四)離散隨機變數分布</a></h3></div><div class="post-content"><h2 id="random-variable隨機變數">Random Variable(隨機變數)</h2>
 <p>定義：</p>
 <blockquote>
 <p>給定樣本空間(S,F)，如果其上的實值函數X:S-&gt;R 是 F(實值)可測函數，則稱X為（實值）隨機變數。</p>
 </blockquote>
-<p>隨機變數是一種關於樣本空間的函數 <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418131124.png" alt="20210418131124" /></p>
+<p>隨機變數是一種關於樣本空間的函數 <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418131124.png" /></p>
 <hr />
 <h4 id="cumulative-distribution-function累積分佈函數">Cumulative Distribution Function(累積分佈函數)</h4>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418132324.png" alt="20210418132324" /><figcaption aria-hidden="true">20210418132324</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418132324.png" /></p>
 <p>機率累加結果的函數，機率質量函數的積分（連續），累加（離散）結果。</p>
 <hr />
 <h4 id="probability-mass-function機率質量函數">Probability mass function（機率質量函數）</h4>
@@ -23,195 +21,101 @@ Cumulative Distribution Function(累積分佈函數"><meta name="keywords" conte
 <p>在機率論中，機率質量函數（probability mass function，簡寫作pmf）是離散隨機變數在各特定取值上的機率。</p>
 </blockquote>
 <p>離散條件下隨即變數某取值的機率</p>
-<p>對於離散條件下顯然有（樣本空間內所有事件的機率和為1）： <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418133045.png" alt="20210418133045" /></p>
+<p>對於離散條件下顯然有（樣本空間內所有事件的機率和為1）： <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418133045.png" /></p>
 <hr />
 <h4 id="binomial-distribution二項分布">Binomial distribution（二項分布）</h4>
 <blockquote>
 <p>在機率論和統計學中，二項式分布（英語：Binomial distribution）是n個獨立的是/非試驗中成功的次數的離散機率分布，其中每次試驗的成功機率為p。</p>
 </blockquote>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418152927.png" alt="20210418152927" /><figcaption aria-hidden="true">20210418152927</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418152927.png" /></p>
 <p>二項分布隨機變數取值遞推關係(連續兩項做比值推導而得)：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418153305.png" alt="20210418153305" /><figcaption aria-hidden="true">20210418153305</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418153305.png" /></p>
 <hr />
 <h4 id="bernoulli-distribution伯努利分布">Bernoulli distribution(伯努利分布)</h4>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418150837.png" alt="20210418150837" /><figcaption aria-hidden="true">20210418150837</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418150837.png" /></p>
 <p>伯努利分布是二項分布的一種特殊情況（僅進行一次trail）</p>
 <hr />
 <h4 id="poisson-distribution泊松分布">Poisson distribution(泊松分布)</h4>
-<p>泊松分布可視為二項分布中n足夠大且λ=np適中時的一種近似計算。在泊松分布機率質量函數推導過程中有： <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418155006.png" alt="20210418155006" /></p>
-<p>機率質量函數: <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418154310.png" alt="20210418154310" /></p>
+<p>泊松分布可視為二項分布中n足夠大且λ=np適中時的一種近似計算。在泊松分布機率質量函數推導過程中有： <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418155006.png" /></p>
+<p>機率質量函數: <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418154310.png" /></p>
 <p>數學期望：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418160304.png" alt="20210418160304" /><figcaption aria-hidden="true">20210418160304</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418160304.png" /></p>
 <p>變異數：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418160717.png" alt="20210418160717" /><figcaption aria-hidden="true">20210418160717</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418160717.png" /></p>
 <p>泊松分布的期望和變異數都可以由二項分布在n趨於正無窮和p趨於0的情況下直接得到。 期望：E(X) = np = λ 變異數：np（1-p）with p趨於0 = λ（1）= λ</p>
 <p>遞推公式：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418182137.png" alt="20210418182137" /><figcaption aria-hidden="true">20210418182137</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418182137.png" /></p>
 <hr />
 <h4 id="幾何分布">幾何分布</h4>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418163853.png" alt="20210418163853" /><figcaption aria-hidden="true">20210418163853</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418163853.png" /></p>
 <p>一種特殊的二項分佈(僅最後一次成功)</p>
 <p>幾何隨機變數的期望：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418164826.png" alt="20210418164826" /><figcaption aria-hidden="true">20210418164826</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418164826.png" /></p>
 <p>幾何隨機變數的變異數：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418164921.png" alt="20210418164921" /><figcaption aria-hidden="true">20210418164921</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418164921.png" /></p>
 <h4 id="negative-binomial-distribution負二項隨機分布">Negative binomial distribution(負二項隨機分布)</h4>
 <blockquote>
 <p>負二項式分布（Negative binomial distribution）是統計學上一種描述在一系列獨立同分布的伯努利試驗中，成功次數到達指定次數（記為r）時失敗次數的離散機率分布。</p>
 </blockquote>
 <p>機率質量函數:</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210427192833.png" alt="20210427192833" /><figcaption aria-hidden="true">20210427192833</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210427192833.png" /></p>
 <p>其中r為累積的成功數，n為trail的總次數。來源為：因為正好累積了r次成功，所以最後一次必為成功，那麼從前n-1次trail中選擇r-1次為成功情況，得到該機率質量函數。</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210427194318.png" alt="20210427194318" /><figcaption aria-hidden="true">20210427194318</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210427194318.png" /></p>
 <p><strong>注意：</strong></p>
 <p>$ x = r $</p>
-<p>參數為(r,p)的負二項分布期望、變異數推導： <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210427202522.png" alt="20210427202522" /></p>
+<p>參數為(r,p)的負二項分布期望、變異數推導： <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210427202522.png" /></p>
 <p>為方便變異數推導，推廣上式為：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210427203348.png" alt="20210427203348" /><figcaption aria-hidden="true">20210427203348</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210427203348.png" /></p>
 <p><strong>注意：Y是有參數(r+1,p)的負二項隨機變數</strong></p>
 <p>帶入k=1&amp;k=2計算變異數：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210427205612.png" alt="20210427205612" /><figcaption aria-hidden="true">20210427205612</figcaption>
-</figure>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210427205720.png" alt="20210427205720" /><figcaption aria-hidden="true">20210427205720</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210427205612.png" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210427205720.png" /></p>
 <h4 id="hypergeometric-distribution超幾何分布">Hypergeometric distribution（超幾何分布）</h4>
 <blockquote>
 <p>超幾何分布（Hypergeometric distribution）是統計學上一種離散機率分布。它描述了由有限個物件中抽出n個物件，成功抽出指定種類的物件的個數（抽出不放回 （without replacement））。</p>
 </blockquote>
 <p>PMF of Hypergeometric distribution:</p>
-<p>總數為N，抽取數為n，抽取到的特殊種類物件數為i，特殊物件總數為m <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210429202019.png" alt="20210429202019" /></p>
+<p>總數為N，抽取數為n，抽取到的特殊種類物件數為i，特殊物件總數為m <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210429202019.png" /></p>
 <p>超幾何分布的期望值和變異數：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210429202311.png" alt="20210429202311" /><figcaption aria-hidden="true">20210429202311</figcaption>
-</figure>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210429202348.png" alt="20210429202348" /><figcaption aria-hidden="true">20210429202348</figcaption>
-</figure>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210429202419.png" alt="20210429202419" /><figcaption aria-hidden="true">20210429202419</figcaption>
-</figure>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210429202446.png" alt="20210429202446" /><figcaption aria-hidden="true">20210429202446</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210429202311.png" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210429202348.png" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210429202419.png" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210429202446.png" /></p>
 <hr />
 <h2 id="expected-value期望值">Expected value(期望值）</h2>
 <p>隨即變數有限取值下定義：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418135406.png" alt="20210418135406" /><figcaption aria-hidden="true">20210418135406</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418135406.png" /></p>
 <p>期望即為對隨機變數值的加權平均（以各隨機變數值對應機率為權重）</p>
-<p>某隨機變數的線性函數期望值滿足(隨機變數的線性函數期望值等於隨機變數的變異數乘以係數加上常數)： <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418142135.png" alt="20210418142135" /></p>
+<p>某隨機變數的線性函數期望值滿足(隨機變數的線性函數期望值等於隨機變數的變異數乘以係數加上常數)： <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418142135.png" /></p>
 <p>隨機變數和的期望等於他們期望的和:</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210429202644.png" alt="20210429202644" /><figcaption aria-hidden="true">20210429202644</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210429202644.png" /></p>
 <h2 id="variance變異數方差">Variance（變異數、方差）</h2>
 <blockquote>
 <p>變異數，應用數學裡的專有名詞。在機率論和統計學中，一個隨機變數的變異數描述的是它的離散程度，也就是該變數離其期望值的距離。</p>
 </blockquote>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418142418.png" alt="20210418142418" /><figcaption aria-hidden="true">20210418142418</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418142418.png" /></p>
 <p>有(變異數為平方的期望減去期望的平方):</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418142641.png" alt="20210418142641" /><figcaption aria-hidden="true">20210418142641</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418142641.png" /></p>
 <p>對於隨機變數的線性函數的變異數有(隨機變數的線性函數的變異數等於隨機變數變異數乘以係數的平方)：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418142911.png" alt="20210418142911" /><figcaption aria-hidden="true">20210418142911</figcaption>
-</figure>
-<p>對變異數開平方根叫做標準差: <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418144247.png" alt="20210418144247" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418142911.png" /></p>
+<p>對變異數開平方根叫做標準差: <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418144247.png" /></p>
 <hr />
 <h2 id="一些題目">一些題目</h2>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418134511.png" alt="20210418134511" /><figcaption aria-hidden="true">20210418134511</figcaption>
-</figure>
-<p>這邊要特別注意： <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418134542.png" alt="20210418134542" /> 該式可以將c用λ代換，減少參數。</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418161554.png" alt="20210418161554" /><figcaption aria-hidden="true">20210418161554</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418134511.png" /></p>
+<p>這邊要特別注意： <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418134542.png" /> 該式可以將c用λ代換，減少參數。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418161554.png" /></p>
 <p>泊松分布用來進行某時間段內事件發生預測時，預測幾個時間段即相應的λ要變為幾倍。</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418181831.png" alt="20210418181831" /><figcaption aria-hidden="true">20210418181831</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210418181831.png" /></p>
 <hr />
-<table>
-<thead>
-<tr class="header">
-<th>分布</th>
-<th style="text-align: right;">機率質量函數</th>
-<th>期望</th>
-<th>變異數</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>二項分布</td>
-<td style="text-align: right;">Cn,k*p<sup>k(1-p)</sup>{n-k}</td>
-<td>np</td>
-<td>np(1-p)</td>
-</tr>
-<tr class="even">
-<td>伯努利分布</td>
-<td style="text-align: right;">q,for k=0;p,for k=1</td>
-<td>p</td>
-<td>p(1-p)</td>
-</tr>
-<tr class="odd">
-<td>泊松分布</td>
-<td style="text-align: right;">e^(-λ)*λ^i/i!</td>
-<td>λ</td>
-<td>λ</td>
-</tr>
-<tr class="even">
-<td>幾何分布</td>
-<td style="text-align: right;">(1-p)^(k-1)*p</td>
-<td>1/p</td>
-<td>(1-p)/p^2</td>
-</tr>
-<tr class="odd">
-<td>負二項分布</td>
-<td style="text-align: right;">Ci-1,r-1 * P^r * (1-p)^{i-r}</td>
-<td>r/p</td>
-<td>r(1-p)/p^2</td>
-</tr>
-<tr class="even">
-<td>超幾何分布</td>
-<td style="text-align: right;">Cm,i * C(N-m),(n-i)/CN,n i=0,1,...,m</td>
-<td>nm/N</td>
-<td>$ [+1 ] $</td>
-</tr>
-</tbody>
-</table>
 <h2 id="總結">總結</h2>
 <ul>
-<li><table>
+<li><table style="width:100%;">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 42%" />
+<col style="width: 12%" />
+<col style="width: 22%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>分布</th>
@@ -255,19 +159,20 @@ Cumulative Distribution Function(累積分佈函數"><meta name="keywords" conte
 <td>超幾何分布</td>
 <td style="text-align: right;">Cm,i * C(N-m),(n-i)/CN,n i=0,1,...,m</td>
 <td>nm/N</td>
-<td>[+1 ]</td>
+<td><span class="math inline">\(\frac{nm}{N}[\frac{(n-1)(m-1)}{N-1}+1 ]\)</span></td>
 </tr>
 </tbody>
 </table></li>
 <li>E(ax+b) = aE(x)+b &amp; Var(ax+b) = a^2Var(x)</li>
-<li><h2 id="真夠累的生日看得我頭暈腦脹">真夠累的，生日看得我頭暈腦脹@@</h2></li>
+<li>真夠累的，生日看得我頭暈腦脹@@</li>
 </ul>
+<hr />
 <h2 id="參考">參考</h2>
 <ul>
 <li>Wikipedia</li>
 <li>https://zhuanlan.zhihu.com/p/166653762</li>
 </ul>
-</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2021-04-18</span><i class="fa fa-tag"></i><a class="tag" href="/tags/Probability-Statistics/" title="Probability&amp;Statistics">Probability&amp;Statistics </a><span class="leancloud_visitors"></span></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="" onclick="javascript:join_favorite()" ref="sidebar"></a></div><div class="twitter"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=,http://aozy.tech/2021/04/18/機率統計筆記-四-隨機變數/,Aozy,機率統計筆記:(四)隨機變數,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/2021/04/21/LA%E7%AD%86%E8%A8%98-%E5%8D%81-Introduction-to-linear-transformation/" title="LA筆記:(十)Introduction to linear transformation">上一篇</a></li><li class="next pagbuttons"><a class="btn" role="navigation" href="/2021/04/04/LA%E7%AD%86%E8%A8%98-%E4%B9%9D-Properties-of-Determinants-and-Cramer-s-Rule/" title="LA筆記:(九)Properties of Determinants and Cramers Rule">下一篇</a></li></ul></div><script src="/js/visitors.js"></script><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@latest/dist/Valine.min.js"></script><script>var valine = new Valine({
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2021-04-18</span><i class="fa fa-tag"></i><a class="tag" href="/tags/Probability-Statistics/" title="Probability&amp;Statistics">Probability&amp;Statistics </a><span class="leancloud_visitors"></span></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="" onclick="javascript:join_favorite()" ref="sidebar"></a></div><div class="twitter"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=,http://aozy.tech/2021/04/18/機率統計筆記-四-隨機變數/,Aozy,機率統計筆記:(四)離散隨機變數分布,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/2021/04/21/LA%E7%AD%86%E8%A8%98-%E5%8D%81-Introduction-to-linear-transformation/" title="LA筆記:(十)Introduction to linear transformation">上一篇</a></li><li class="next pagbuttons"><a class="btn" role="navigation" href="/2021/04/04/LA%E7%AD%86%E8%A8%98-%E4%B9%9D-Properties-of-Determinants-and-Cramer-s-Rule/" title="LA筆記:(九)Properties of Determinants and Cramers Rule">下一篇</a></li></ul></div><script src="/js/visitors.js"></script><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@latest/dist/Valine.min.js"></script><script>var valine = new Valine({
   el:'#vcomments',
   notify:false || false, 
   verify:false|| false, 
