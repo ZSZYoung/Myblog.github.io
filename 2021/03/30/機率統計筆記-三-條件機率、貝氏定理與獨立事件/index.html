@@ -9,26 +9,18 @@ In probability theory, conditional probability is a measure of the probability o
 </blockquote>
 <p>B條件下A發生的機率記為：P(A|B)</p>
 <p><strong>有下式成立：</strong></p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210330164844.png" alt="20210330164844" /><figcaption aria-hidden="true">20210330164844</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210330164844.png" /></p>
 <p><strong>亦有下式成立：</strong></p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210330173424.png" alt="20210330173424" /><figcaption aria-hidden="true">20210330173424</figcaption>
-</figure>
-<p>在機率運算中可推得： <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210330173456.png" alt="20210330173456" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210330173424.png" /></p>
+<p>在機率運算中可推得： <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210330173456.png" /></p>
 <p>該式說明在計算某事件機率時，可以由該事件的某條件事件及其餘事件得到。</p>
 <p><strong>貝氏法則：</strong></p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210330173121.png" alt="20210330173121" /><figcaption aria-hidden="true">20210330173121</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210330173121.png" /></p>
 <p>可簡單由上式推導得到。</p>
 <p>貝氏法則可以得到條件與事後事件互換事件的機率。</p>
 <hr />
 <h2 id="互相獨立事件">互相獨立事件</h2>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210330212122.png" alt="20210330212122" /><figcaption aria-hidden="true">20210330212122</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210330212122.png" /></p>
 <p><strong>注意：互相獨立事件和互斥事件是兩個不同的概念。如擲一枚硬幣，結果正反互斥，而與再擲一枚這一事件互相獨立。</strong></p>
 <p>互相獨立事件結合貝氏法則我們可以得到：</p>
 <p>P(B|A) = P(B)</p>
@@ -39,19 +31,13 @@ In probability theory, conditional probability is a measure of the probability o
 <p>若事件Ａ與Ｂ互相獨立，則Ａ與Ｂ的餘事件也互相獨立。</p>
 </blockquote>
 <h4 id="三個事件互相獨立的條件">三個事件互相獨立的條件</h4>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210330214847.png" alt="20210330214847" /><figcaption aria-hidden="true">20210330214847</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210330214847.png" /></p>
 <h4 id="條件獨立條件機率與互相獨立事件的結合">條件獨立（條件機率與互相獨立事件的結合）</h4>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210330233053.png" alt="20210330233053" /><figcaption aria-hidden="true">20210330233053</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210330233053.png" /></p>
 <hr />
 <h2 id="有點意思的題目">有點意思的題目</h2>
 <h4 id="卡片顔色問題">卡片顔色問題</h4>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210330211038.png" alt="20210330211038" /><figcaption aria-hidden="true">20210330211038</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210330211038.png" /></p>
 <p>這題目直接用貝氏定理展開計算并不難，但有意思的在於倘若你直接讀題思考，容易陷入：朝上一面是紅色，可能性只剩下紅紅和紅黑兩張牌，所以答案為1/2的誤區。而實際上朝上的一面為紅色有三種可能，因為紅色牌的兩面都可能朝上，所以答案為1/3。</p>
 <h4 id="費馬">費馬</h4>
 <blockquote>
@@ -61,29 +47,8 @@ In probability theory, conditional probability is a measure of the probability o
 <blockquote>
 <p>Fermat的論點是：m 次失敗前出現n次成功的充要條件是在首m+n−1 次試行中至少有n次成功 。</p>
 </blockquote>
-<p>粗糙得論證該觀點正確性(if and only if)：</p>
-<p><逆向時></p>
-<p>m+n−1 次試行中至少有n次成功</p>
-<p>=&gt;</p>
-<p>m+n-1 次試行中至多m-1次失敗</p>
-<p>=&gt;</p>
-<p>出現第m次失敗時，已經有了n次成功，即m次失敗前出現n次成功。</p>
-<p><正向時>(反證)</p>
-<p>若首m+n-1次中成功數少於n---(1)</p>
-<p>=&gt;</p>
-<p>若首m+n-1次中成功數小於等於n-1</p>
-<p>=&gt;</p>
-<p>首m+n-1次中失敗數大於等於m</p>
-<p>=&gt;(with(1))</p>
-<p>首m+n-1次中成功數少於等於n-1且失敗數大於等於m</p>
-<p>=&gt;</p>
-<p>無法在m次失敗前出現n次成功</p>
-<p>=&gt;</p>
-<p>首m+n-1次中成功數大於等於n時可推得m次失敗前出現n次成功</p>
 <p>所以答案為：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210330225051.png" alt="20210330225051" /><figcaption aria-hidden="true">20210330225051</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210330225051.png" /></p>
 <h2 id="參考資料">參考資料</h2>
 <ul>
 <li>Wikipedia</li>

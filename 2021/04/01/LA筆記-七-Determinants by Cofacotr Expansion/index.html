@@ -1,40 +1,32 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Aozy"><title>LA筆記:(七)Determinants by Cofacotr Expansion · Aozy</title><meta name="description" content="Determinant(行列式)
 低階數矩陣的行列式計算
 
-20210401114333
-
 這邊三階行列式公式用降階的方法得到。
 
 Minor and Cofactor
 
-if A is a square matrix, then the minor(子式) of entry ai"><meta name="keywords" content="blog"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- 加入测试--><!--link (rel="icon", href= url_for('images/favicon.ico')) --><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">Aozy</a></h3><div class="description"><p>何如暮暮與朝朝，更改卻，年年歲歲。</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/ZSZYoung"><i class="fa fa-github"></i></a></li></ul><div class="footer"><div class="p"> <span>©  </span><i class="fa fa-star"></i><span> Aozy</span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/mrcore/hexo-theme-Anatole-Core" target="_blank">Anatole-Core  </a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首頁</a></li><li><a href="/archives">歸檔</a></li><li><a href="/tags">標籤</a></li><li><a href="/about">關於</a></li><li><a href="/guestbook">留言</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>LA筆記:(七)Determinants by Cofacotr Expansion</a></h3></div><div class="post-content"><h2 id="determinant行列式">Determinant(行列式)</h2>
+if A is a square matrix, then the minor(子式) of entry aij, denoted by Mij,"><meta name="keywords" content="blog"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- 加入测试--><!--link (rel="icon", href= url_for('images/favicon.ico')) --><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">Aozy</a></h3><div class="description"><p>何如暮暮與朝朝，更改卻，年年歲歲。</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/ZSZYoung"><i class="fa fa-github"></i></a></li></ul><div class="footer"><div class="p"> <span>©  </span><i class="fa fa-star"></i><span> Aozy</span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/mrcore/hexo-theme-Anatole-Core" target="_blank">Anatole-Core  </a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首頁</a></li><li><a href="/archives">歸檔</a></li><li><a href="/tags">標籤</a></li><li><a href="/about">關於</a></li><li><a href="/guestbook">留言</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>LA筆記:(七)Determinants by Cofacotr Expansion</a></h3></div><div class="post-content"><h2 id="determinant行列式">Determinant(行列式)</h2>
 <h4 id="低階數矩陣的行列式計算">低階數矩陣的行列式計算</h4>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210401114333.png" alt="20210401114333" /><figcaption aria-hidden="true">20210401114333</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210401114333.png" /></p>
 <p>這邊三階行列式公式用降階的方法得到。</p>
 <hr />
 <h4 id="minor-and-cofactor">Minor and Cofactor</h4>
 <blockquote>
 <p>if A is a square matrix, then the minor(子式) of entry aij, denoted by Mij, is defined to be the determinant of the submatrix that remains after the ith row and jth column are deleted from A. The number (-1)^(i+j) Mij, denoted by Cij is called the cofactor(餘子式) of entry aij.</p>
 </blockquote>
-<p>minor（子式）是刪除某行列後的行列式值，是一個數值。對應的cofactor(餘子式)也是一個數值。 <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210401113957.png" alt="20210401113957" /></p>
+<p>minor（子式）是刪除某行列後的行列式值，是一個數值。對應的cofactor(餘子式)也是一個數值。 <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210401113957.png" /></p>
 <p>cij = (-1)^(i+j) Mij</p>
 <hr />
 <h4 id="theorem方陣任意row或column的所有項與項的餘子式乘積之和相等且該乘積即為矩陣的行列式值">Theorem：方陣任意row或column的所有項與項的餘子式乘積之和相等,且該乘積即為矩陣的行列式值。</h4>
 <blockquote>
 <p>if A is an n-by-n matrix, then regardless of which row or column of A is chosen, the number obtained by multiplying the entries in that row or column by the corresponding cofactors and adding the resulting products is always the same.</p>
 </blockquote>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210402232120.png" alt="20210402232120" /><figcaption aria-hidden="true">20210402232120</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210402232120.png" /></p>
 <p>即對於矩陣A有：</p>
 <p>det(A) = ai1·ci1 + ai2·ci2 + ... + ain-1·cin-1 + ain·cin i∈[1,n]</p>
 <p>= a1j·c1j + a2j·c2j + ... + an-1j·cn-1j + anj·cnj j∈[1,n]</p>
 <p>該方法可以應用於行列式計算時的降階法（因為） cofactor對應minor，而minor會刪掉某row與column。如下例子：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210402233700.png" alt="20210402233700" /><figcaption aria-hidden="true">20210402233700</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210402233700.png" /></p>
 <p>我們對於row1進行降階。有：</p>
 <p>det(A)</p>
 <p>= a11·c11 + 0·c12 + 0·c13 + 0·c14</p>
@@ -48,9 +40,7 @@ if A is a square matrix, then the minor(子式) of entry ai"><meta name="keyword
 <h4 id="theorem三角形矩陣的行列式值為主軸乘積">Theorem:三角形矩陣的行列式值為主軸乘積</h4>
 <blockquote>
 <p>If A is an n-by-n matrix then</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210402234608.png" alt="20210402234608" /><figcaption aria-hidden="true">20210402234608</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210402234608.png" /></p>
 </blockquote>
 <h4 id="section"></h4>
 <h2 id="參考">參考</h2>

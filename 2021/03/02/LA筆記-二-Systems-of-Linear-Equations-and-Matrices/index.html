@@ -30,36 +30,24 @@ A mathematical sentence with an equal sign (=) to indicate that two"><meta name=
 <ul>
 <li>general form</li>
 </ul>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302104639.png" alt="20210302104639" /><figcaption aria-hidden="true">20210302104639</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302104639.png" /></p>
 <ul>
 <li>matrix eqution</li>
 </ul>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302104758.png" alt="20210302104758" /><figcaption aria-hidden="true">20210302104758</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302104758.png" /></p>
 <p>where A is called the coefficient matrix(係數矩陣), X is called the solution vector, b is called the constant vector.</p>
 <p><strong>Def of Augmented matrix（增廣矩陣） of the linear system:</strong></p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302105506.png" alt="20210302105506" /><figcaption aria-hidden="true">20210302105506</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302105506.png" /></p>
 <p>如：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302105547.png" alt="20210302105547" /><figcaption aria-hidden="true">20210302105547</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302105547.png" /></p>
 <p>當僅僅constant vecotr(b)不同時，可以簡單的表示幾個增廣矩陣為：</p>
 <p>AX=b, with b=b1,b2,b3 表示為：[A|b1|b2|b3] -&gt;(ERO) [A'|b1'|b2'|b3']</p>
 <hr />
 <h4 id="gaussjordan-elimination高斯約當消去法">Gauss–Jordan elimination（高斯約當消去法）</h4>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/imagesGJＥ2.jpg" alt="GJＥ2" /><figcaption aria-hidden="true">GJＥ2</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/imagesGJＥ2.jpg" /></p>
 <p>由高斯消去法(forward pass)得到REF,再經由約旦的方法(backward pass)消去leading1所在column得到RREF，由RREF即可得到general solution.</p>
 <p>Types of Elementary row operations:</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302110411.png" alt="20210302110411" /><figcaption aria-hidden="true">20210302110411</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210302110411.png" /></p>
 <ul>
 <li>row交換操作：矩陣中互換兩個row位置</li>
 <li>row乘法操作：矩陣某一row中每一個元素同時乘以某非0常數</li>
@@ -83,11 +71,9 @@ A mathematical sentence with an equal sign (=) to indicate that two"><meta name=
 </ul>
 </blockquote>
 <p>some facts of about REF: * REF of A are not unique * RREF of A is unique * The leading 1 always occur in the same positions in A, those are called the <strong>pivot(樞紐) position</strong> of A. * Pivot column: a column of A that has leading 1 * Pivot row: a row of A that has leading 1 * A <strong>nonzero entry</strong> in a pivot position of A is called a pivot of A</p>
-<p>例子： Find (1)pivot rows (2)pivot columns (3)pivots of A where: <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210307222935.png" alt="20210307222935" /></p>
+<p>例子： Find (1)pivot rows (2)pivot columns (3)pivots of A where: <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210307222935.png" /></p>
 <p>通過ERO獲得REF：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210307223124.png" alt="20210307223124" /><figcaption aria-hidden="true">20210307223124</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210307223124.png" /></p>
 <p>所以： (1):pivot rows:1,2,3 (2):pivot columns:1,3,5 (3):pivots of A: -10,-5</p>
 <p><strong>Def of Reduced row echelon form</strong> &gt;* 滿足REF的定義 &gt;* each column that contains a leading 1 has zeros everywhere else in this column. 含有leading 1的column其餘項皆為0</p>
 <p><strong>Steps for Gauss-Jordan Elimination：</strong></p>
@@ -101,9 +87,7 @@ A mathematical sentence with an equal sign (=) to indicate that two"><meta name=
 </ol>
 <p>高斯約旦消去法例子：</p>
 <p>試解綫性系統：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210306130211.png" alt="20210306130211" /><figcaption aria-hidden="true">20210306130211</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210306130211.png" /></p>
 <p>解： <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images1.jpg" alt="1" /></p>
 <figure>
 <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images3.jpg" alt="3" /><figcaption aria-hidden="true">3</figcaption>
@@ -113,7 +97,7 @@ A mathematical sentence with an equal sign (=) to indicate that two"><meta name=
 <p><strong>Def of set of all solutions of a linear system:</strong> &gt; The set of all solution of a linear system is called its solution set or the general solution.</p>
 <p><strong>Note:</strong></p>
 <ul>
-<li>solution vector <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210306131932.png" alt="20210306131932" /></li>
+<li>solution vector <img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210306131932.png" /></li>
 <li>A linear system is consistent(相容的) if it has at least one solution and inconsistent if it has no solution.</li>
 </ul>
 <p><strong>Theorem:</strong></p>
@@ -121,13 +105,9 @@ A mathematical sentence with an equal sign (=) to indicate that two"><meta name=
 <p>every system of linear equations has either no solutions, exactly one solution, or infinitely many solutions. 線性系統要麽沒解，要麽有唯一解，要麽由無窮多解。</p>
 </blockquote>
 <p>無解情況：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210307214127.png" alt="20210307214127" /><figcaption aria-hidden="true">20210307214127</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210307214127.png" /></p>
 <p>可解得REF：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210307214611.png" alt="20210307214611" /><figcaption aria-hidden="true">20210307214611</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210307214611.png" /></p>
 <p>對於最下邊row而言，0=-17顯然衝突，無解。</p>
 <p>證明綫性系統不會有大於一個有窮解:</p>
 <p>proof:</p>

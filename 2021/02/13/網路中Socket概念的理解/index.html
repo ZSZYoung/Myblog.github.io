@@ -7,17 +7,13 @@ Socket是網路編程中常常能聽到的一個概念，自己對這個概念�
 <p>先看看wiki中的定義： &gt; A network socket is a software structure within a network node of a computer network that serves as an endpoint for sending and receiving data across the network.</p>
 <p>簡單翻譯一下：socket是計算機網路中資料傳送和接收的端點。</p>
 <p>再看看不同面向下socket的意義：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images/v2-2300584e2919c3818df8c08ed556234c_720w.jpg" alt="v2-2300584e2919c3818df8c08ed556234c_720w" /><figcaption aria-hidden="true">v2-2300584e2919c3818df8c08ed556234c_720w</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images/v2-2300584e2919c3818df8c08ed556234c_720w.jpg" /></p>
 <ul>
 <li>對於作業系統內核來說，socket是進程溝通的端點</li>
 <li>對於應用來說，socket是應用從網路讀寫的文件描述符</li>
 </ul>
 <p>再看看socket的位置：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images/圖片1.jpg" alt="圖片1" /><figcaption aria-hidden="true">圖片1</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images/圖片1.jpg" /></p>
 <p>可見Socket位於應用層和傳輸層(TCP/UDP)之間，負責應用層和應用層以下協議棧之間的信息交互。</p>
 <p>以下為例(向1.2.3.4的80port通過tcp協定發送字串"Hello, world!")：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Socket mysocket = getSocket(type = <span class="string">&quot;TCP&quot;</span>)</span><br><span class="line">connect(mysocket, address = <span class="string">&quot;1.2.3.4&quot;</span>, port = <span class="string">&quot;80&quot;</span>)</span><br><span class="line">send(mysocket, <span class="string">&quot;Hello, world!&quot;</span>)</span><br><span class="line">close(mysocket)</span><br></pre></td></tr></table></figure>

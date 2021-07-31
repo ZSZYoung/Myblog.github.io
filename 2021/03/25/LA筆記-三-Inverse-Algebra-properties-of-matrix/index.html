@@ -7,9 +7,7 @@ Properties of matrix arithmetic
 proof of A·(B+C) = A·B + A·C :
 
 
-20210325203941
-
-證明思路：通過矩陣"><meta name="keywords" content="blog"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- 加入测试--><!--link (rel="icon", href= url_for('images/favicon.ico')) --><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">Aozy</a></h3><div class="description"><p>何如暮暮與朝朝，更改卻，年年歲歲。</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/ZSZYoung"><i class="fa fa-github"></i></a></li></ul><div class="footer"><div class="p"> <span>©  </span><i class="fa fa-star"></i><span> Aozy</span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/mrcore/hexo-theme-Anatole-Core" target="_blank">Anatole-Core  </a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首頁</a></li><li><a href="/archives">歸檔</a></li><li><a href="/tags">標籤</a></li><li><a href="/about">關於</a></li><li><a href="/guestbook">留言</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>LA筆記:(三)Inverse,Algebra(properties of matrix)</a></h3></div><div class="post-content"><h2 id="前言">前言</h2>
+證明思路：通過矩陣乘法公式展開後，通過純量的分配率構建"><meta name="keywords" content="blog"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- 加入测试--><!--link (rel="icon", href= url_for('images/favicon.ico')) --><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">Aozy</a></h3><div class="description"><p>何如暮暮與朝朝，更改卻，年年歲歲。</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/ZSZYoung"><i class="fa fa-github"></i></a></li></ul><div class="footer"><div class="p"> <span>©  </span><i class="fa fa-star"></i><span> Aozy</span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/mrcore/hexo-theme-Anatole-Core" target="_blank">Anatole-Core  </a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首頁</a></li><li><a href="/archives">歸檔</a></li><li><a href="/tags">標籤</a></li><li><a href="/about">關於</a></li><li><a href="/guestbook">留言</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>LA筆記:(三)Inverse,Algebra(properties of matrix)</a></h3></div><div class="post-content"><h2 id="前言">前言</h2>
 <p>本篇關於可逆矩陣和一些矩陣運算的特點補充。</p>
 <hr />
 <h2 id="properties-of-matrix-arithmetic">Properties of matrix arithmetic</h2>
@@ -17,9 +15,7 @@ proof of A·(B+C) = A·B + A·C :
 <ul>
 <li><strong>proof</strong> of A·(B+C) = A·B + A·C :</li>
 </ul>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210325203941.jpg" alt="20210325203941" /><figcaption aria-hidden="true">20210325203941</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210325203941.jpg" /></p>
 <p>證明思路：通過矩陣乘法公式展開後，通過純量的分配率構建出矩陣乘法的分配率。</p>
 <ul>
 <li><p>什麽條件下 A·B = A·C =&gt; B=C</p>
@@ -58,14 +54,10 @@ proof of A·(B+C) = A·B + A·C :
 <p>定義： &gt; if A is a matrix, and if a matrix B can be found such that <em>A·B = B·A = I, then A is said to be invertible(nonsingular)</em> and B is called an inverse of A. If no such B can be found, then A is said to be singular(non-invertible)</p>
 <p><strong>注意隱含了A、B都是方陣，即可逆矩陣一定是方陣</strong></p>
 <p><strong>注意：</strong></p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210329111223.png" alt="20210329111223" /><figcaption aria-hidden="true">20210329111223</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210329111223.png" /></p>
 <p>等order（size）的方陣AB有AB = I則一定BA=I。即證明矩陣可逆時，從兩個中證明一個即可。</p>
 <h4 id="怎樣找到可逆矩陣的逆矩陣">怎樣找到可逆矩陣的逆矩陣</h4>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210325222335.png" alt="20210325222335" /><figcaption aria-hidden="true">20210325222335</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/ZSZYoung/Images-Host@main/blog/images20210325222335.png" /></p>
 <p>同時對可逆矩陣A和同size的單位矩陣I做相同的ERO直到A變為單位矩陣(RREF of A)，I變化後得到的矩陣即為A的逆矩陣A^-1</p>
 <h4 id="可逆矩陣之逆矩陣的唯一性">可逆矩陣之逆矩陣的唯一性</h4>
 <blockquote>
