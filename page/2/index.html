@@ -110,7 +110,24 @@ mjx-container[display="true"] {
 mjx-container[display="true"] + br {
   display: none;
 }
-</style></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">Aozy</a></h3><div class="description"><p>何如暮暮與朝朝，更改卻，年年歲歲。</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/ZSZYoung"><i class="fa fa-github"></i></a></li></ul><div class="footer"><div class="p"> <span>©  </span><i class="fa fa-star"></i><span> Aozy</span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/mrcore/hexo-theme-Anatole-Core" target="_blank">Anatole-Core  </a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a class="current" href="/">首頁</a></li><li><a href="/archives">歸檔</a></li><li><a href="/tags">標籤</a></li><li><a href="/about">關於</a></li><li><a href="/guestbook">留言</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)" style="display:none;"> </a></li></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2021/10/19/MLG%E7%AC%94%E8%AE%B0-%E4%B8%83-Node-Embeddings/">MLG笔记:(七) Node Embeddings</a></h3></div><div class="post-content"><p>
+</style></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">Aozy</a></h3><div class="description"><p>何如暮暮與朝朝，更改卻，年年歲歲。</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/ZSZYoung"><i class="fa fa-github"></i></a></li></ul><div class="footer"><div class="p"> <span>©  </span><i class="fa fa-star"></i><span> Aozy</span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/mrcore/hexo-theme-Anatole-Core" target="_blank">Anatole-Core  </a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a class="current" href="/">首頁</a></li><li><a href="/archives">歸檔</a></li><li><a href="/tags">標籤</a></li><li><a href="/about">關於</a></li><li><a href="/guestbook">留言</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)" style="display:none;"> </a></li></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2021/10/28/MLG%E7%AC%94%E8%AE%B0-%E5%85%AB-Random-Walk-Approaches-for-Node-Embeddings/">MLG笔记:(八)Random Walk Approaches for Node Embeddings</a></h3></div><div class="post-content"><p>
+上章談到Node Embedding的overview，這次詳細談random walk這一embedding的方法之一。
+如同字面上的意思，random walk就是從起始點隨機選一個鄰居節點作為下一個目的地(可以重複走同一edge)，如此往復。
+
+
+Random-Walk Embeddings
+...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2021-10-28</span><i class="fa fa-tag"></i><a class="tag" href="/tags/Machine-Learning/" title="Machine Learning">Machine Learning </a><a class="tag" href="/tags/GraphML/" title="GraphML">GraphML </a><span class="leancloud_visitors"></span></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2021/10/23/ML%E7%AC%94%E8%AE%B0-%E5%9B%9B-Theory-of-Generalization/">ML笔记:(四) Theory of Generalization</a></h3></div><div class="post-content"><p>
+Effective Number of Lines
+以下討論時，ML是否可行。考慮以下條件:
+
+即如下圖所示：
+
+可見與圖中處時，而由藍色區域結合uniform distribution的CDF判斷 。
+令 即
+即只要，會大於設定的threshold。
+所以:
+
+這邊我們的有無數多個,可見...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2021-10-23</span><i class="fa fa-tag"></i><a class="tag" href="/tags/Machine-Learning/" title="Machine Learning">Machine Learning </a><span class="leancloud_visitors"></span></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2021/10/19/MLG%E7%AC%94%E8%AE%B0-%E4%B8%83-Node-Embeddings/">MLG笔记:(七) Node Embeddings</a></h3></div><div class="post-content"><p>
 Traditional ML for Graphs
 
 在傳統的Graph ML中我們通過Feature engineering 處理原始輸入的graph得到Structured Feature，再將這些結構化的特征輸入ML演算法中得到可供預測用的機器學習模型。
@@ -160,13 +177,4 @@ Types of graph
 
 有向圖與無向圖的選擇：
 
-...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2021-09-23</span><i class="fa fa-tag"></i><a class="tag" href="/tags/Machine-Learning/" title="Machine Learning">Machine Learning </a><a class="tag" href="/tags/GraphML/" title="GraphML">GraphML </a><span class="leancloud_visitors"></span></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2021/09/23/MLG%E7%AC%94%E8%AE%B0-%E4%BA%8C-Applications-of-Graph-ML/">MLG笔记:(二) Applications of Graph ML</a></h3></div><div class="post-content"><p>Different tasks of GraphML
-
-
-Node classification: Predict a property of a node.(e.g. Categorize online users)
-Link prediction: Predict whether there are ...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2021-09-23</span><i class="fa fa-tag"></i><a class="tag" href="/tags/Machine-Learning/" title="Machine Learning">Machine Learning </a><a class="tag" href="/tags/GraphML/" title="GraphML">GraphML </a><span class="leancloud_visitors"></span></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2021/09/23/MLG%E7%AC%94%E8%AE%B0-%E4%B8%80-Motivation-for-Graph-ML/">MLG笔记:(一) Motivation for Graph ML</a></h3></div><div class="post-content"><p>Why Graph?
-Graph體現了entities(nodes)之間的聯繫，這些聯繫構成一個network。許多的數據都可以自然的用graph來建模表示，例如計算機網路、疾病傳染路徑、社交網路等。即graph有廣泛的應用空間。
-
-課程討論的主要問題：
-
-How do we take advantag...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2021-09-23</span><i class="fa fa-tag"></i><a class="tag" href="/tags/Machine-Learning/" title="Machine Learning">Machine Learning </a><a class="tag" href="/tags/GraphML/" title="GraphML">GraphML </a><span class="leancloud_visitors"></span></div></div></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/">上一頁</a></li><li class="next pagbuttons"><a class="btn" role="navigation" href="/page/3/">下一頁</a></li></ul></div></div></div></div><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/add-bookmark.js"></script><script src="/js/baidu-tongji.js"></script></body></html>
+...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2021-09-23</span><i class="fa fa-tag"></i><a class="tag" href="/tags/Machine-Learning/" title="Machine Learning">Machine Learning </a><a class="tag" href="/tags/GraphML/" title="GraphML">GraphML </a><span class="leancloud_visitors"></span></div></div></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/">上一頁</a></li><li class="next pagbuttons"><a class="btn" role="navigation" href="/page/3/">下一頁</a></li></ul></div></div></div></div><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/add-bookmark.js"></script><script src="/js/baidu-tongji.js"></script></body></html>
