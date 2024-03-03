@@ -19,7 +19,7 @@ Markdown的圖片插入一直都是一個比較麻煩的事情。因為不可能
 <p>Repo:Username/Repo</p>
 <p>Token:剛剛保存的token在此填入</p>
 <p>Custom Url:因為大陸地區訪問Github速度堪憂導致圖片在大陸地區顯示緩慢，所以需要用到CDN加速，以JSDelivr為例配置為:https://cdn.jsdelivr.net/gh/用戶名/倉庫名@分支名</p>
-<p>Custom Output Format:筆者有將hexo的渲染器改為pandoc，該渲染器在處理圖片時會將圖片注釋渲染上去，影響美觀，應在picgo上傳階段取消自動注釋,故該項應設置為: <img src="$%7Burl%7D" /></p></li>
+<p>Custom Output Format:筆者有將hexo的渲染器改為pandoc，該渲染器在處理圖片時會將圖片注釋渲染上去，影響美觀，應在picgo上傳階段取消自動注釋,故該項應設置為: "picgo.customOutputFormat": "[](${url})"</p></li>
 </ul>
 <hr />
 <h2 id="使用方法">使用方法</h2>
